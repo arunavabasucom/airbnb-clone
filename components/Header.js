@@ -10,10 +10,10 @@ import {
 export default function Header() {
   return (
     <header
-      className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md 
+      className="sticky z-50 top-0  grid grid-cols-3 bg-white shadow-lg 
     py-5 px-5 
     
-    md:px-10
+    md:px-10 
     "
       // or just use p-5 for padding
       //it sticks to the top
@@ -21,8 +21,8 @@ export default function Header() {
       {/* left --> airbnb logo*/}
       <div className="relative flex items-center h-10 cursor-pointer my-auto">
         {/* self closed component */}
-        <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg"
+        <Image 
+          src="/assets/airbnb_logo.svg"
           //
           layout="fill"
           objectFit="contain"
@@ -48,11 +48,11 @@ export default function Header() {
       {/* Right */}
       <div className=" flex space-x-4  items-center justify-end text-gray-500 ">
         <p className="hidden md:inline cursor-pointer">Become a host</p>
-        <GlobeAltIcon className="h-6 cusrser-pointer " />
+        <GlobeAltIcon className="h-6 cursor-pointer " />
 
         <div className="flex item-center space-x-2 border-4 p-2 rounded-full border-wi">
-          <MenuIcon className="h-6" />
-          <UserCircleIcon className="h-6" />
+          <MenuIcon className="h-6 cursor-pointer" />
+          <UserCircleIcon className="h-6 cursor-pointer" />
         </div>
       </div>
     </header>

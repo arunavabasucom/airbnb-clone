@@ -1,0 +1,12 @@
+React -->
+   destructing 
+   exporting 
+   selfclosing tag
+
+
+scripts -->
+    npm run dev
+
+
+tailwindup -->
+     jit or just in time compiler
