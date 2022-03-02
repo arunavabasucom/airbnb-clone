@@ -5,7 +5,7 @@ export default function Banner() {
       <Image src="/assets/banner.jpg" layout="fill" objectFit="cover" />
 
       <div className="absolute top-1/2 w-full text-center">
-        <p className="text-sm sm:text-lg font-bold hover:scale-125 transition duration-150">
+        <p className="text-sm sm:text-lg font-bold sm:hover:scale-125 transition duration-150">
           Not sure where to go? Perfect
         </p>
         <button

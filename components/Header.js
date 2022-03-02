@@ -48,7 +48,7 @@ export default function Header() {
       {/* Right */}
       <div className=" flex space-x-4  items-center justify-end text-gray-500 ">
         <p className="hidden md:inline cursor-pointer">Become a host</p>
-        <GlobeAltIcon className="h-6 cursor-pointer " />
+        <GlobeAltIcon className=" h-6 cursor-pointer h-6" />
 
         <div className="flex item-center space-x-2 border-4 p-2 rounded-full border-wi">
           <MenuIcon className="h-6 cursor-pointer" />
