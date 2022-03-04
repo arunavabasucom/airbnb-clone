@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Calendar, DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import { useRouter } from "next/router";
 import {
   SearchIcon,
   GlobeAltIcon,
@@ -14,38 +15,58 @@ import {
 export default function Header() {
   const [searchInput, setsearchInput] = useState("");
   // console.log(searchInput);
-  const [startDate, setstartDate] = useState(new Date());
-  const [endDate, setendDate] = useState(new Date());
+  const [startDate, setstartDate] = useState( new  Date());
+  const [endDate, setendDate] = useState( new Date());
   const [noOfGuests, setNoOfGuests] = useState(1);
+  const router = useRouter();
+
+ 
 
   const handleSelect = (ranges) => {
-    //the key --> selection
+    //the key --> selection --> the basically trackets the user input
     setstartDate(ranges.selection.startDate);
     setendDate(ranges.selection.endDate);
   };
 
+  
   const selectionRange = {
     startDate: startDate,
     endDate: endDate,
     key: "selection",
   };
 
-  const resetInput =()=>{
+  const resetInput = () => {
     setsearchInput("");
-  }
+  };
+
+  //  finctionality for search button in calender view
+  const searchquery = () => {
+    //nextJS gives a built in page base router when it clicked the pages save in the history and we have just pushes the page from history
+    // router.push("/search");
+    router.push({
+      pathname: "/search",
+      query: {
+        location: searchInput,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+        noOfGuests,
+      },
+    });
+  };
 
   return (
     <header
       className="sticky z-50 top-0  grid grid-cols-3 bg-white shadow-lg 
-    py-5 px-5 
-    
-    md:px-10 
-    "
+    py-5 px-5    md:px-10     "
+
       // or just use p-5 for padding
       //it sticks to the top
     >
       {/* left --> airbnb logo*/}
-      <div className="relative flex items-center h-10 cursor-pointer my-auto">
+      <div
+        onClick={() => router.push("/")}
+        className="relative flex items-center h-10 cursor-pointer my-auto"
+      >
         {/* self closed component */}
         <Image
           src="/assets/airbnb_logo.svg"
@@ -106,10 +127,12 @@ export default function Header() {
             />
           </div>
           <div className="flex ">
-            <button className="flex-grow text-gray-500"
-            onClick={resetInput}
-            >Cancel</button>
-            <button className="flex-grow text-red-400">Search</button>
+            <button className="flex-grow text-gray-500" onClick={resetInput}>
+              Cancel
+            </button>
+            <button onClick={searchquery} className="flex-grow text-red-400">
+              Search
+            </button>
           </div>
         </div>
       )}
