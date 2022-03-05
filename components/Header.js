@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { Calendar, DateRangePicker } from "react-date-range";
+import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { useRouter } from "next/router";
@@ -12,7 +12,7 @@ import {
   UsersIcon,
 } from "@heroicons/react/solid";
 
-export default function Header() {
+export default function Header({placeholder}) {
   const [searchInput, setsearchInput] = useState("");
   // console.log(searchInput);
   const [startDate, setstartDate] = useState( new  Date());
@@ -86,7 +86,7 @@ export default function Header() {
           onChange={(e) => setsearchInput(e.target.value)}
           className="pl-5 outline-none bg-transparent flex-grow text-sm text-gray-600 placeholder-gray-400"
           type="text"
-          placeholder="Start your search "
+          placeholder={placeholder || "Start your search "}
           //placeholder is a hint text
         />
         <SearchIcon
