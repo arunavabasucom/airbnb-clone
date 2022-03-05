@@ -11,7 +11,7 @@ scripts -->
 tailwindup -->
      jit or just in time compiler
      min-w-[300px] - what is mean by minimum width
-
+     modifier
 
 Next js -->
      ssr

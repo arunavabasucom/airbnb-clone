@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { format } from "date-fns";
 import Infocard from "../components/Infocard";
 
-export default function Search({ serachResults }) {
+export default function Search({ serchResults}) {
 
 
   //insilize router
@@ -45,12 +45,12 @@ export default function Search({ serachResults }) {
 
           {/* searchresults div */}
           <div className="flex flex-col">
-          {serachResults.map(
+          {serchResults.map(
             ({ img, location, title, description, star, price, total }) => (
               <Infocard
                 key={img}
                 img={img}
-                loctiona={location}
+                location={location}
                 title={title}
                 description={description}
                 star={star}
