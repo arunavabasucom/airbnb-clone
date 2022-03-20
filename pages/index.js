@@ -61,7 +61,7 @@ export default function Home({ exploreData, cardData }) {
   );
 }
 
-//?to get the api request
+//for server side rendering
 export async function getStaticProps() {
   const exploreData = await fetch("https://links.papareact.com/pyp").then(
     (res) => res.json()
