@@ -6,11 +6,10 @@ This project is a web app that aims to provide users with a platform to find, bo
 
 ## Table of Contents
 
-- Features
-- Screenshots
-- Installation and Usage
-- Contributing
-- License
+- [Features](#features)
+- [Installation and Usage](#installation-and-usage)
+- Contributing(#contributing)
+- License(#license)
 
 ### Features
 
@@ -40,3 +39,11 @@ git clone https://github.com/arunavabasu-03/airbnb-clone.git
 ```bash
 mapbox_key = <MAPBOX KEY>
 ```
+### Contributing
+If you would like to contribute to the project, feel free to fork the repository and make changes as you see fit. You can then submit a pull request to have your changes reviewed and potentially merged into the main branch.
+
+### License
+This project is licensed under the [MIT License](https://github.com/arunavabasu-03/airbnb-clone/blob/dev/LICENSE). See the LICENSE file for details.
+
+
+
