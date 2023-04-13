@@ -8,8 +8,8 @@ This project is a web app that aims to provide users with a platform to find, bo
 
 - [Features](#features)
 - [Installation and Usage](#installation-and-usage)
-- Contributing(#contributing)
-- License(#license)
+- [Contributing](#contributing)
+- [License](#license)
 
 ### Features
 
